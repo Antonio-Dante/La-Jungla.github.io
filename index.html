@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salón de Fiestas La Jungla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="encabezado">
+      <h1 class="titulo-jungla">SALÓN DE FIESTAS<br>"LA JUNGLA"</h1>
+      <img src="Imagenes/logo.jpg" alt="Logo La Jungla" class="logo">
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="conocenos.html">Conócenos</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="paquetes.html">Paquetes</a></li>
+        <li><a href="localizacion.html">Localización</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contenido-principal">
+      <div class="ilustraciones">
+        <img src="Imagenes/personas bailando.png" alt="Personas bailando">
+      </div>
+
+      <div class="mensaje">
+        <p>¡Adéntrate en la aventura!<br>
+        "La Jungla" es tu destino para<br>
+        celebraciones salvajemente divertidas<br>
+        y llenas de emoción.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <h2>Contáctanos</h2>
+  <div class="redes">
+    <a href="#" onclick="copiarTelefono()" title="Copiar número">
+  <img src="imagenes/telefono.png" alt="Teléfono" />
+    </a>
+    <div id="mensaje-copiado">¡Número copiado al portapapeles!</div>
+
+
+    <a href="https://www.facebook.com/profile.php?id=100075885865303" target="_blank">
+      <img src="imagenes/facebook.png" alt="Facebook" title="Ir a Facebook" />
+    </a>
+
+    <a href="https://www.instagram.com/salonlajungla?igsh=dWZzcXl6cHkxZGh1&utm_source=qr" target="_blank">
+      <img src="imagenes/logotipo-de-instagram.png" alt="Instagram" title="Ir a Instagram" />
+    </a>
+
+    <a href="https://www.tiktok.com/@la.jungla81?_t=ZS-8x7JSQiYC3d&_r=1" target="_blank">
+      <img src="imagenes/tik-tok.png" alt="tiktok" title="Ir a tiktok" />
+    </a>
+  </div>
+</footer>
+
+<script>
+  function copiarTelefono() {
+    const numero = "5549952127"; 
+    navigator.clipboard.writeText(numero)
+      .then(() => {
+        const mensaje = document.getElementById("mensaje-copiado");
+        mensaje.classList.add("mostrar");
+
+        setTimeout(() => {
+          mensaje.classList.remove("mostrar");
+        }, 2500);
+      })
+      .catch(err => {
+        console.error("Error al copiar el número: ", err);
+      });
+  }
+</script>
+</body>
+</html>
+
+
